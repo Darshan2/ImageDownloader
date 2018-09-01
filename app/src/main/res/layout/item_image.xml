@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:paddingLeft="@dimen/normal_padding"
+    android:paddingRight="@dimen/normal_padding"
+    android:paddingTop="@dimen/small_padding"
+    android:paddingBottom="@dimen/small_padding"
+    android:background="@color/light_putple">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relLayout1">
+
+        <TextView
+            android:id="@+id/fileName_TV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@id/download_Btn"
+            android:layout_toLeftOf="@id/download_Btn"
+            android:textSize="18sp"
+            tool:text="File name"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/author_TV"
+            android:layout_below="@id/fileName_TV"
+            android:layout_toStartOf="@id/download_Btn"
+            android:layout_toLeftOf="@id/download_Btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            tool:text="author"
+            android:textStyle="bold"
+            android:textColor="@color/colorAccent"/>
+
+        <Button
+            android:id="@+id/download_Btn"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/button_background"
+            android:text="@string/download"
+            android:textColor="@color/white"/>
+
+        <Button
+            android:visibility="gone"
+            android:id="@+id/retry_Btn"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/button_background"
+            android:text="@string/retry"
+            android:textColor="@color/white"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/relLayout1">
+
+        <SeekBar
+            android:id="@+id/progress_SeekBar"
+            android:layout_width="match_parent"
+            android:layout_height="12dp"
+            android:thumbTint="@color/colorAccent"
+            tool:progress="10"
+            android:visibility="gone"
+            android:progressTint="@color/dark_red"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
